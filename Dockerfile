@@ -4,46 +4,36 @@ ENV TZ=Asia/Seoul
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 ENV DEBIAN_FRONTEND=noninteractive
 
-# # 기본 패키지 설치
+# 기본 패키지 설치
 RUN apt-get update && apt-get install --no-install-recommends -y \
-    build-essential cmake git curl wget unzip pkg-config \
-    libeigen3-dev libboost-all-dev libflann-dev \
-    libqhull-dev libusb-1.0-0-dev \
-    libgl1-mesa-dev libxmu-dev libxi-dev \
-    libyaml-cpp-dev \
-    python3 python3-pip python3-dev \
+    build-essential cmake git curl sudo wget unzip pkg-config \
+    software-properties-common htop nano wget cppcheck systemd init \
+    pkg-config lsb-release libtool automake bison flex ruby \
     && apt-get clean
 
 # MiniConda 설치
-RUN wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-aarch64.sh  && pwd \
+RUN wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-aarch64.sh --no-check-certificate && \
     chmod +x /Miniconda3-latest-Linux-aarch64.sh && \
     bash /Miniconda3-latest-Linux-aarch64.sh -b -p /opt/conda && \     
     rm /Miniconda3-latest-Linux-aarch64.sh
-ENV PATH /opt/conda/bin:$PATH
+ENV PATH=/opt/conda/bin:$PATH
 
-RUN conda install python jupyter pip
+RUN conda install -y python=3.10 pip
 RUN conda clean -ya 
 RUN echo "export PATH=/opt/conda/bin:\$PATH" > /etc/profile.d/conda.sh
 ENV PYTHONUNBUFFERED=1
 
 # pip 패키지 설치
-RUN pip install --upgrade pip && \
+RUN pip install --root-user-action=ignore --upgrade pip && \
     pip install --root-user-action=ignore \
     numpy cython wheel \
-    torch torchvision torchaudio \
+    torch torchvision torchaudio open3d \
     scikit-learn matplotlib tqdm \
     && rm -rf ~/.cache/pip
 
 # YOLO 설치
 RUN git clone https://github.com/ultralytics/ultralytics.git /yolo && \
     pip install -e /yolo
-
-# PCL 소스 설치
-WORKDIR /tmp
-RUN wget https://github.com/PointCloudLibrary/pcl/releases/download/pcl-1.15.0/source.tar.gz && \
-    tar -xvzf source.tar.gz && cd pcl && mkdir build && cd build && \
-    cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr && \
-    make -j$(nproc) && make install
 
 # 유저 생성
 ARG USER=ioes
