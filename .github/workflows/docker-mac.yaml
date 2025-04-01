@@ -37,7 +37,7 @@
             id: meta
             uses: docker/metadata-action@v5
             with:
-              images: ioeslab/sonar-ai
+              images: ioeslab/ioes-sonar-ai
               tags: latest
     
           - name: Build and push Docker image
