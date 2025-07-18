@@ -1,21 +1,49 @@
-## 3D Point Cloud Dataset
-[![Publish a Docker image (ARM64; Apple Silicon)](https://github.com/IOES-Lab/SonarAI-Dockerfile/actions/workflows/docker-mac.yaml/badge.svg)](https://github.com/IOES-Lab/SonarAI-Dockerfile/actions/workflows/docker-mac.yaml)
+## Small Underwater Objects 3D Point Cloud Dataset
+This repository provides a high-quality underwater Objects 3D point cloud dataset acquired using the BlueView BV5000 S3 multibeam sonar. The dataset includes multiple real underwater objects captured at different distances and labeled for object detection and recognition tasks.
 
-## 사용방법
-### 자동빌드된 이미지 받으려면
+## Overview
+The dataset contains 3D point cloud representations of underwater objects such as tires, dummies, drums, and nets. All data were collected in real sea environments using a multibeam sonar scanner and processed to generate .xyz files with intensity values.
 
-```bash
-docker pull ioeslab/ioes-sonar-ai:latest
-```
+- Device: BlueView BV5000 S3
+- Environment: Real ocean near Korea Maritime and Ocean University
+- Depth: ~6 meters
+- Format: `.xyz`, `.son`, `.txt`
 
-### 직접 빌드하려면, 
+## Dataset Structure
+├── Tire/
+│   ├── Tire_5m/
+│   │   ├── .xyz/     # 3D Point Cloud files (x, y, z, intensity)
+│   │   ├── .txt/     # YOLO format label files
+│   │   └── .son/     # Raw sonar files
+│   ├── Tire_7m/
+│   │   ├── .xyz/
+│   │   ├── .txt/
+│   │   └── .son/
+│   └── Tire_10m/
+│       ├── .xyz/
+│       ├── .txt/
+│       └── .son/
 
-```bash
-docker build -f Dockerfile -t ioes-sonar-ai .
-```
+├── Dummy/
+│   ├── Dummy_5m/
+│   │   ├── .xyz/
+│   │   ├── .txt/
+│   │   └── .son/
+│   ├── Dummy_7m/
+│   └── Dummy_10m/
 
-### 실행시키려면,
+├── Drum/
+│   ├── Drum_5m/
+│   ├── Drum_7m/
+│   └── Drum_10m/
 
-```bash
-docker run -it --rm -v /Users/$(whoami):/home/ioes/HOST ioes-sonar-ai /bin/bash
-```
+├── Net/
+│   ├── Net_5m/
+│   ├── Net_7m/
+│   └── Net_10m/
+
+└── Chair/
+    ├── Chair_5m/
+    ├── Chair_7m/
+    └── Chair_10m/
+
