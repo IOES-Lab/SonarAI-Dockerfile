@@ -11,39 +11,67 @@ The dataset contains 3D point cloud representations of underwater objects such a
 
 ## Dataset Structure
 ├── Tire/
-│   ├── Tire_5m/
-│   │   ├── .xyz/     # 3D Point Cloud files (x, y, z, intensity)
-│   │   ├── .txt/     # YOLO format label files
-│   │   └── .son/     # Raw sonar files
-│   ├── Tire_7m/
-│   │   ├── .xyz/
-│   │   ├── .txt/
-│   │   └── .son/
-│   └── Tire_10m/
-│       ├── .xyz/
-│       ├── .txt/
-│       └── .son/
-
+│ ├── Tire_5m/
+│ │ ├── *.xyz # 3D Point Cloud files
+│ │ ├── *.txt # YOLO format label files
+│ │ └── *.son # Raw sonar files
+│ ├── Tire_7m/
+│ │ ├── *.xyz
+│ │ ├── *.txt
+│ │ └── *.son
+│ └── Tire_10m/
+│ ├── *.xyz
+│ ├── *.txt
+│ └── *.son
 ├── Dummy/
-│   ├── Dummy_5m/
-│   │   ├── .xyz/
-│   │   ├── .txt/
-│   │   └── .son/
-│   ├── Dummy_7m/
-│   └── Dummy_10m/
-
+│ ├── Dummy_5m/
+│ │ ├── *.xyz
+│ │ ├── *.txt
+│ │ └── *.son
+│ ├── Dummy_7m/
+│ │ ├── *.xyz
+│ │ ├── *.txt
+│ │ └── *.son
+│ └── Dummy_10m/
+│ ├── *.xyz
+│ ├── *.txt
+│ └── *.son
 ├── Drum/
-│   ├── Drum_5m/
-│   ├── Drum_7m/
-│   └── Drum_10m/
-
+│ ├── Drum_5m/
+│ │ ├── *.xyz
+│ │ ├── *.txt
+│ │ └── *.son
+│ ├── Drum_7m/
+│ │ ├── *.xyz
+│ │ ├── *.txt
+│ │ └── *.son
+│ └── Drum_10m/
+│ ├── *.xyz
+│ ├── *.txt
+│ └── *.son
 ├── Net/
-│   ├── Net_5m/
-│   ├── Net_7m/
-│   └── Net_10m/
-
+│ ├── Net_5m/
+│ │ ├── *.xyz
+│ │ ├── *.txt
+│ │ └── *.son
+│ ├── Net_7m/
+│ │ ├── *.xyz
+│ │ ├── *.txt
+│ │ └── *.son
+│ └── Net_10m/
+│ ├── *.xyz
+│ ├── *.txt
+│ └── *.son
 └── Chair/
-    ├── Chair_5m/
-    ├── Chair_7m/
-    └── Chair_10m/
-
+├── Chair_5m/
+│ ├── *.xyz
+│ ├── *.txt
+│ └── *.son
+├── Chair_7m/
+│ ├── *.xyz
+│ ├── *.txt
+│ └── *.son
+└── Chair_10m/
+├── *.xyz
+├── *.txt
+└── *.son
