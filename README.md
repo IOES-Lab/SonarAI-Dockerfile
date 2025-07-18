@@ -1,4 +1,4 @@
-## 도커 이미지 정상 컴파일 확인용 뱃지
+## 3D Point Cloud Dataset
 [![Publish a Docker image (ARM64; Apple Silicon)](https://github.com/IOES-Lab/SonarAI-Dockerfile/actions/workflows/docker-mac.yaml/badge.svg)](https://github.com/IOES-Lab/SonarAI-Dockerfile/actions/workflows/docker-mac.yaml)
 
 ## 사용방법
