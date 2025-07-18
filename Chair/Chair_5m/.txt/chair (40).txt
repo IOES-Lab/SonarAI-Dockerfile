@@ -1,0 +1,16 @@
+# DateTime_TiltAngle=7_03_2025_161414_45
+# SoundVelocity=1500
+# ImageCal=100
+# TVG=1.0
+# Gain=8.0
+# Sonar=MB1350-N-S3
+# ProScan Version=9936
+# RangeThreshold=250
+# HorizontalMountOffset=8.900
+# VerticalMountOffset=12.100
+# Beams Inverted= true
+# PTInverted= UPRIGHT
+# PanTiltPanAxisInterpolatorEnabled=1
+# Scan Speed=5
+# MultiDetectCount=1
+# MultiDetectMinSeparation=0.2
