@@ -1,16 +1,3 @@
-# DateTime_TiltAngle=7_04_2025_142827_45
-# SoundVelocity=1500
-# ImageCal=100
-# TVG=1.0
-# Gain=8.0
-# Sonar=MB1350-N-S3
-# ProScan Version=9936
-# RangeThreshold=250
-# HorizontalMountOffset=8.900
-# VerticalMountOffset=12.100
-# Beams Inverted= true
-# PTInverted= UPRIGHT
-# PanTiltPanAxisInterpolatorEnabled=1
-# Scan Speed=5
-# MultiDetectCount=2
-# MultiDetectMinSeparation=0.15
+version https://git-lfs.github.com/spec/v1
+oid sha256:d0e16e858fb6772c06ea56bf83b06ec41ea0f7180130b3324301785f09107d0e
+size 388
