@@ -15,7 +15,7 @@ The dataset contains 3D point cloud representations of underwater objects such a
 Tire/
 ├── Tire_5m/
 │   ├── *.xyz   # 3D Point Cloud (x, y, z, intensity)
-│   ├── *.txt   # YOLO label files
+│   ├── *.txt   # Sonar Setting information
 │   └── *.son   # Raw sonar files
 ├── Tire_7m/
 │   ├── *.xyz
